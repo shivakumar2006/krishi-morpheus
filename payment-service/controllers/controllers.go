@@ -107,9 +107,9 @@ func (pc *PaymentController) CreateCheckoutSession(w http.ResponseWriter, r *htt
 	// Decide success URL
 	successURL := ""
 	if body.Mode == "cart" {
-		successURL = "http://localhost:5173/cart-success?session_id={CHECKOUT_SESSION_ID}"
+		successURL = "http://localhost:5174/cart-success?session_id={CHECKOUT_SESSION_ID}"
 	} else {
-		successURL = "http://localhost:5173/booking-success?session_id={CHECKOUT_SESSION_ID}"
+		successURL = "http://localhost:5174/booking-success?session_id={CHECKOUT_SESSION_ID}"
 	}
 
 	// Metadata based on mode
@@ -135,7 +135,7 @@ func (pc *PaymentController) CreateCheckoutSession(w http.ResponseWriter, r *htt
 		LineItems:          lineItems,
 		Mode:               stripe.String("payment"),
 		SuccessURL:         stripe.String(successURL),
-		CancelURL:          stripe.String("http://localhost:5173/payment-cancel"),
+		CancelURL:          stripe.String("http://localhost:5174/payment-cancel"),
 		Metadata:           metadata,
 	}
 

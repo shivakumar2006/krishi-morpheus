@@ -8,3 +8,13 @@ uploads/
 __pycache__/
 dist/
 build/
+*.jpg
+*.png
+*.avif
+*.mp4
+*.jpeg
+*.webp
+*.gif
+*.mov
+.DS_Store
+**/.DS_Store

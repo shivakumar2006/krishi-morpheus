@@ -64,7 +64,7 @@ func main() {
 
 	// 6) CORS SETUP -------------------------------------------
 	c := cors.New(cors.Options{
-		AllowedOrigins:   []string{"http://localhost:5173"}, // React dev port
+		AllowedOrigins:   []string{"http://localhost:5174"}, // React dev port
 		AllowedMethods:   []string{"GET", "POST", "PATCH", "DELETE", "OPTIONS"},
 		AllowedHeaders:   []string{"Authorization", "Content-Type"},
 		AllowCredentials: true,
